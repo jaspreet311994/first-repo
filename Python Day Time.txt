@@ -1,0 +1,31 @@
+def is_year_leap(year):
+    if ((year % 4 == 0 and year%100 != 0) or year % 400 == 0 ):
+        return True
+    else:
+        return False
+
+def days_in_month(year, month):
+    if ( 1 >= month >=12):
+        print("Invalid entry!")
+    month = [31,30,31,30,31,30,31,30,31,30,31]
+    
+    if month == 2:
+        if is_year_leap(year):
+            return 29
+        else:
+            return 28
+    else:
+        return day_in_month(month)
+
+def day_of_year(year, month, day):
+    if (1 >= day >=31):
+        print("Invalid date")
+    days = []
+    for i in range (31):
+        days.append(i)
+    
+    days_in_month(year, )
+
+print(day_of_year(2000, 12, 31))
+
+
